@@ -1,0 +1,2 @@
+# BLUE
+ITS NICO FIRST AI 
