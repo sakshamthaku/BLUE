@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLUE AI | Powered by NICO</title>
+
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <h2 class="logo">NICO<span>.</span></h2>
+    <span class="status"><i></i> BLUE ONLINE</span>
+    <select id="language" aria-label="Language">
+      <option value="en-US">English</option>
+      <option value="hi-IN">हिन्दी</option>
+      <option value="pa-IN">ਪੰਜਾਬੀ</option>
+      <option value="es-ES">Español</option>
+    </select>
+  </header>
+
+  <main class="hero">
+    <section class="intro">
+      <p class="eyebrow">NEXT-GENERATION DIGITAL EMPLOYEE</p>
+      <h1>Meet <span>BLUE.</span></h1>
+      <p class="description">
+        Your intelligent digital partner. Built for the future.
+        Powered by NICO technology.
+      </p>
+
+      <div class="chat">
+        <input id="command" placeholder="Hey BLUE, introduce yourself..." />
+        <button id="send">SEND ↗</button>
+      </div>
+
+      <div class="actions">
+        <button data-command="hello">Say Hello</button>
+        <button data-command="wave">Wave</button>
+        <button data-command="dance">Dance</button>
+        <button data-command="sleep">Sleep</button>
+      </div>
+
+      <button id="voice" class="voice-button">🎙 Start Voice Command</button>
+      <p id="response" aria-live="polite">BLUE is ready to assist you.</p>
+    </section>
+
+    <section class="robot-section">
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+
+      <div class="robot" id="robot">
+        <div class="antenna"></div>
+
+        <div class="head">
+          <div class="ear ear-left"></div>
+          <div class="ear ear-right"></div>
+
+          <div class="face">
+            <div class="eyes">
+              <div class="eye"><div class="pupil"></div></div>
+              <div class="eye"><div class="pupil"></div></div>
+            </div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+          </div>
+        </div>
+
+        <div class="neck"></div>
+
+        <div class="arms">
+          <div class="arm arm-left"><div class="hand"></div></div>
+          <div class="arm arm-right"><div class="hand"></div></div>
+        </div>
+
+        <div class="torso">
+          <div class="chest-light"></div>
+          <h2>NICO</h2>
+          <p>BLUE AI SYSTEM</p>
+          <div class="chest-lines"></div>
+        </div>
+
+        <div class="legs">
+          <div class="leg"><div class="foot"></div></div>
+          <div class="leg"><div class="foot"></div></div>
+        </div>
+      </div>
+      <p class="robot-label">B.L.U.E. — DIGITAL INTELLIGENCE</p>
+    </section>
+  </main>
+
+  <footer>© 2026 NICO. | BLUE Artificial Intelligence</footer>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
