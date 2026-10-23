@@ -2,94 +2,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLUE AI | Powered by NICO</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="The personal website and vision of Saksham Thakur — technology, ideas, and the future." />
+  <title>Saksham Thakur — Personal Vision</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="navbar">
-    <h2 class="logo">NICO<span>.</span></h2>
-    <span class="status"><i></i> BLUE ONLINE</span>
-    <select id="language" aria-label="Language">
-      <option value="en-US">English</option>
-      <option value="hi-IN">हिन्दी</option>
-      <option value="pa-IN">ਪੰਜਾਬੀ</option>
-      <option value="es-ES">Español</option>
-    </select>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home">SAKSHAM<span>.</span></a>
+
+      <button class="menu-toggle" aria-label="Open navigation"
+        aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#vision">Vision</a>
+        <a href="#work">Work</a>
+        <a class="nav-contact" href="#contact">Let's connect ↗</a>
+      </div>
+    </nav>
   </header>
 
-  <main class="hero">
-    <section class="intro">
-      <p class="eyebrow">NEXT-GENERATION DIGITAL EMPLOYEE</p>
-      <h1>Meet <span>BLUE.</span></h1>
-      <p class="description">
-        Your intelligent digital partner. Built for the future.
-        Powered by NICO technology.
-      </p>
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span class="status-dot"></span>
+          INDEPENDENT THINKER · FUTURE BUILDER
+        </p>
 
-      <div class="chat">
-        <input id="command" placeholder="Hey BLUE, introduce yourself..." />
-        <button id="send">SEND ↗</button>
+        <h1>Building ideas.<br />
+          <span>Shaping tomorrow.</span>
+        </h1>
+
+        <p class="hero-description">
+          I'm Saksham Thakur. I explore technology, turn ideas into
+          real projects, and work toward a future where innovation
+          makes a meaningful difference.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#vision" class="button button-dark">
+            Explore my vision <span>↗</span>
+          </a>
+          <a href="#work" class="text-link">Discover my work ↓</a>
+        </div>
       </div>
 
-      <div class="actions">
-        <button data-command="hello">Say Hello</button>
-        <button data-command="wave">Wave</button>
-        <button data-command="dance">Dance</button>
-        <button data-command="sleep">Sleep</button>
+      <div class="hero-art reveal" aria-label="Abstract monochrome geometric artwork">
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+        <div class="art-line"></div>
+        <div class="art-caption">IDEAS INTO REALITY<br />EST. 2006</div>
+        <span class="art-symbol">S.</span>
       </div>
 
-      <button id="voice" class="voice-button">🎙 Start Voice Command</button>
-      <p id="response" aria-live="polite">BLUE is ready to assist you.</p>
+      <div class="hero-bottom">
+        <span>BASED IN INDIA</span>
+        <a href="#about">SCROLL TO EXPLORE ↓</a>
+        <span>CREATING WITH PURPOSE</span>
+      </div>
     </section>
 
-    <section class="robot-section">
-      <div class="orbit orbit-one"></div>
-      <div class="orbit orbit-two"></div>
-
-      <div class="robot" id="robot">
-        <div class="antenna"></div>
-
-        <div class="head">
-          <div class="ear ear-left"></div>
-          <div class="ear ear-right"></div>
-
-          <div class="face">
-            <div class="eyes">
-              <div class="eye"><div class="pupil"></div></div>
-              <div class="eye"><div class="pupil"></div></div>
-            </div>
-            <div class="nose"></div>
-            <div class="mouth"></div>
-          </div>
+    <section class="section section-light" id="about">
+      <div class="container about-grid reveal">
+        <div>
+          <p class="eyebrow">01 / A LITTLE ABOUT ME</p>
+          <h2>Curiosity is where<br />everything <span>begins.</span></h2>
         </div>
-
-        <div class="neck"></div>
-
-        <div class="arms">
-          <div class="arm arm-left"><div class="hand"></div></div>
-          <div class="arm arm-right"><div class="hand"></div></div>
-        </div>
-
-        <div class="torso">
-          <div class="chest-light"></div>
-          <h2>NICO</h2>
-          <p>BLUE AI SYSTEM</p>
-          <div class="chest-lines"></div>
-        </div>
-
-        <div class="legs">
-          <div class="leg"><div class="foot"></div></div>
-          <div class="leg"><div class="foot"></div></div>
+        <div class="about-copy">
+          <p>
+            I'm a computer science student focused on AI and machine
+            learning, with a strong interest in building useful digital
+            products and exploring new possibilities in technology.
+          </p>
+          <p>
+            For me, learning is not just about understanding how things
+            work. It's about imagining what could work better — and
+            taking the first step to create it.
+          </p>
+          <a class="text-link dark-link" href="#contact">Get to know me ↗</a>
         </div>
       </div>
-      <p class="robot-label">B.L.U.E. — DIGITAL INTELLIGENCE</p>
+    </section>
+
+    <section class="section section-dark" id="vision">
+      <div class="container reveal">
+        <p class="eyebrow eyebrow-light">02 / MY VISION</p>
+        <h2 class="vision-statement">
+          Don't just follow the future.<br />
+          <span>Help build it.</span>
+        </h2>
+        <p class="vision-description">
+          My ambition is to create technology that solves real problems,
+          empowers people, and makes complex things simpler.
+          Every meaningful product starts with a question, an idea,
+          and the willingness to keep learning.
+        </p>
+
+        <div class="principles">
+          <article class="principle">
+            <span>01</span>
+            <h3>Think differently.</h3>
+            <p>Question assumptions. Stay curious. Look beyond the obvious.</p>
+          </article>
+          <article class="principle">
+            <span>02</span>
+            <h3>Build consistently.</h3>
+            <p>Turn knowledge into action and ideas into working products.</p>
+          </article>
+          <article class="principle">
+            <span>03</span>
+            <h3>Create with purpose.</h3>
+            <p>Focus on real problems and build things that help people.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="work">
+      <div class="container reveal">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / SELECTED PROJECTS</p>
+            <h2>Ideas in <span>progress.</span></h2>
+          </div>
+          <p class="heading-note">
+            A growing collection of things I'm exploring and building.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-number">01</div>
+            <div class="project-info">
+              <h3>NICO.</h3>
+              <p>A technology vision exploring software, AI, and digital experiences.</p>
+              <div class="tags"><span>Technology</span><span>AI</span><span>Vision</span></div>
+            </div>
+            <a href="https://notez-b1322.web.app/" target="_blank"
+              rel="noopener noreferrer" class="project-arrow"
+              aria-label="Visit the NoteZ project website">↗</a>
+          </article>
+
+          <article class="project">
+            <div class="project-number">02</div>
+            <div class="project-info">
+              <h3>NoteZ</h3>
+              <p>A productivity platform concept for notes, planning, and everyday student tasks.</p>
+              <div class="tags"><span>Productivity</span><span>Web App</span></div>
+            </div>
+            <a href="https://notez-b1322.web.app/" target="_blank"
+              rel="noopener noreferrer" class="project-arrow"
+              aria-label="Visit NoteZ">↗</a>
+          </article>
+
+          <article class="project">
+            <div class="project-number">03</div>
+            <div class="project-info">
+              <h3>Experiments & Beyond</h3>
+              <p>Small builds, new technologies, and experiments that turn learning into experience.</p>
+              <div class="tags"><span>Development</span><span>Learning</span></div>
+            </div>
+            <a href="#contact" class="project-arrow" aria-label="Ask about my projects">↗</a>
+          </article>
+        </div>
+        <p class="project-note">
+          Project descriptions represent current interests and concepts.
+          Update them as each project evolves.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner reveal">
+        <p class="eyebrow eyebrow-light">04 / HAVE AN IDEA?</p>
+        <h2>Let's make<br /><span>something meaningful.</span></h2>
+        <p>
+          Open to conversations about technology, ideas, collaboration,
+          and the future.
+        </p>
+        <a class="button button-light"
+          href="mailto:YOUR_EMAIL@example.com">
+          Get in touch <span>↗</span>
+        </a>
+      </div>
+      <div class="contact-decoration" aria-hidden="true">S.</div>
     </section>
   </main>
 
-  <footer>© 2026 NICO. | BLUE Artificial Intelligence</footer>
-  <script src="app.js"></script>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#home">SAKSHAM<span>.</span></a>
+      <p>Built with intention. Focused on what's next.</p>
+      <span>© <span id="year"></span> Saksham Thakur</span>
+    </div>
+  </footer>
+
 </body>
 </html>
