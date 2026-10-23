@@ -2,9 +2,11 @@
 const menuButton = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
+// Mobile navigation
 if (menuButton && navLinks) {
   menuButton.addEventListener("click", () => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    const isOpen =
+      menuButton.getAttribute("aria-expanded") === "true";
 
     menuButton.setAttribute("aria-expanded", String(!isOpen));
     menuButton.setAttribute(
@@ -24,7 +26,7 @@ if (menuButton && navLinks) {
   });
 }
 
-// Reveal content as it enters the viewport.
+// Reveal sections on scroll
 const revealElements = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
@@ -40,12 +42,16 @@ if ("IntersectionObserver" in window) {
     { threshold: 0.12 }
   );
 
-  revealElements.forEach((element) => observer.observe(element));
+  revealElements.forEach((element) => {
+    observer.observe(element);
+  });
 } else {
-  revealElements.forEach((element) => element.classList.add("visible"));
+  revealElements.forEach((element) => {
+    element.classList.add("visible");
+  });
 }
 
-// Automatically update the copyright year.
+// Dynamic copyright year
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
