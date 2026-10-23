@@ -42,58 +42,89 @@ button {
   margin-inline: auto;
 }
 
+/* NAVBAR */
+
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgb(255 255 255 / 92%);
+  background: rgb(255 255 255 / 94%);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgb(0 0 0 / 6%);
 }
 
 .nav {
-  min-height: 82px;
+  min-height: 78px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font: 800 1.15rem var(--font-heading);
-  letter-spacing: -1px;
+  font: 700 1.05rem var(--font-heading);
+  letter-spacing: -0.6px;
 }
 
 .logo span {
-  color: #888;
+  color: #999999;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 30px;
   font-size: 0.88rem;
-  color: #555;
+  color: #555555;
 }
 
 .nav-links a {
   transition: color 0.25s ease;
 }
 
-.nav-links a:hover,
-.text-link:hover {
-  color: #999;
-}
-
-.nav-links .nav-contact {
-  padding: 10px 17px;
-  border: 1px solid #dedede;
-  border-radius: 4px;
-  color: var(--black);
+.nav-links a:hover {
+  color: #999999;
 }
 
 .menu-toggle {
   display: none;
 }
+
+/* MOVING NAME */
+
+.name-animation {
+  grid-column: 1 / -1;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.name-animation span {
+  display: block;
+  width: max-content;
+  white-space: nowrap;
+  font: 800 clamp(2rem, 5vw, 4.5rem) var(--font-heading);
+  letter-spacing: -2px;
+  color: #111111;
+  animation: nameTravel 12s linear infinite;
+}
+
+.name-animation span:hover {
+  animation-play-state: paused;
+}
+
+@keyframes nameTravel {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+/* HERO */
 
 .hero {
   min-height: 690px;
@@ -102,7 +133,7 @@ button {
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
   gap: 40px;
-  padding-top: 80px;
+  padding-top: 55px;
   padding-bottom: 110px;
 }
 
@@ -115,7 +146,7 @@ button {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #777;
+  color: #777777;
   margin-bottom: 26px;
 }
 
@@ -123,7 +154,7 @@ button {
   display: inline-block;
   width: 7px;
   height: 7px;
-  background: #222;
+  background: #222222;
   border-radius: 50%;
   margin-right: 9px;
 }
@@ -180,18 +211,22 @@ h2 span {
 }
 
 .button-dark {
-  color: white;
-  background: var(--black);
+  color: #ffffff;
+  background: #111111;
 }
 
 .button-dark:hover {
-  background: #333;
+  background: #333333;
 }
 
 .text-link {
   font-size: 0.88rem;
   font-weight: 600;
   transition: color 0.25s ease;
+}
+
+.text-link:hover {
+  color: #999999;
 }
 
 .hero-art {
@@ -245,7 +280,7 @@ h2 span {
   position: absolute;
   bottom: 22px;
   left: 22px;
-  color: #777;
+  color: #777777;
   font-size: 0.62rem;
   letter-spacing: 1.5px;
   line-height: 1.8;
@@ -259,10 +294,12 @@ h2 span {
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  color: #888;
+  color: #888888;
   font-size: 0.65rem;
   letter-spacing: 1.3px;
 }
+
+/* SECTIONS */
 
 .section {
   padding: 120px 0;
@@ -298,15 +335,17 @@ h2 span {
 .dark-link {
   display: inline-block;
   margin-top: 12px;
-  color: var(--black);
-  border-bottom: 1px solid #999;
+  color: #111111;
+  border-bottom: 1px solid #999999;
   padding-bottom: 4px;
 }
 
+/* VISION */
+
 .section-dark,
 .contact-section {
-  background: var(--black);
-  color: var(--white);
+  background: #111111;
+  color: #ffffff;
 }
 
 .eyebrow-light {
@@ -324,7 +363,7 @@ h2 span {
 
 .vision-description {
   max-width: 590px;
-  color: #aaa;
+  color: #aaaaaa;
   margin-top: 27px;
   line-height: 1.9;
 }
@@ -359,6 +398,8 @@ h2 span {
   line-height: 1.9;
 }
 
+/* PROJECTS */
+
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -369,7 +410,7 @@ h2 span {
 
 .heading-note {
   max-width: 270px;
-  color: #777;
+  color: #777777;
   font-size: 0.9rem;
 }
 
@@ -394,7 +435,7 @@ h2 span {
 .project-number {
   align-self: start;
   padding-top: 6px;
-  color: #888;
+  color: #888888;
   font-size: 0.78rem;
 }
 
@@ -421,7 +462,7 @@ h2 span {
   border: 1px solid #dededb;
   padding: 4px 10px;
   font-size: 0.7rem;
-  color: #666;
+  color: #666666;
 }
 
 .project-arrow {
@@ -436,15 +477,11 @@ h2 span {
 }
 
 .project-arrow:hover {
-  color: white;
-  background: var(--black);
+  color: #ffffff;
+  background: #111111;
 }
 
-.project-note {
-  color: #888;
-  font-size: 0.76rem;
-  margin-top: 22px;
-}
+/* CONTACT */
 
 .contact-section {
   position: relative;
@@ -465,12 +502,12 @@ h2 span {
   max-width: 470px;
   margin-top: 25px;
   margin-bottom: 30px;
-  color: #aaa;
+  color: #aaaaaa;
 }
 
 .button-light {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #111111;
 }
 
 .button-light:hover {
@@ -487,23 +524,40 @@ h2 span {
   pointer-events: none;
 }
 
+/* FOOTER */
+
 .footer {
-  background: #fff;
+  background: #ffffff;
+  border-top: 1px solid #e8e8e8;
 }
 
 .footer-inner {
-  min-height: 100px;
+  min-height: 110px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.footer p,
-.footer-inner > span {
-  color: #888;
-  font-size: 0.78rem;
+.footer-inner p,
+.copyright,
+.back-top {
+  color: #777777;
+  font-size: 0.8rem;
 }
+
+.back-top {
+  transition: color 0.2s ease;
+}
+
+.back-top:hover {
+  color: #111111;
+}
+
+/* SCROLL REVEAL */
 
 .reveal {
   opacity: 0;
@@ -516,18 +570,27 @@ h2 span {
   transform: translateY(0);
 }
 
+/* ART ANIMATION */
+
 @keyframes float {
-  0%, 100% { transform: translate(35px, 35px); }
-  50% { transform: translate(35px, 15px); }
+  0%, 100% {
+    transform: translate(35px, 35px);
+  }
+
+  50% {
+    transform: translate(35px, 15px);
+  }
 }
+
+/* TABLET */
 
 @media (max-width: 800px) {
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
-    padding-top: 90px;
+    padding-top: 45px;
     padding-bottom: 100px;
-    gap: 50px;
+    gap: 40px;
   }
 
   .hero-art {
@@ -565,6 +628,8 @@ h2 span {
   }
 }
 
+/* MOBILE */
+
 @media (max-width: 600px) {
   .container {
     width: calc(100% - 36px);
@@ -579,15 +644,15 @@ h2 span {
     flex-direction: column;
     gap: 6px;
     padding: 10px;
-    border: 1px solid #ddd;
-    background: white;
+    border: 1px solid #dddddd;
+    background: #ffffff;
     cursor: pointer;
   }
 
   .menu-toggle span {
     width: 20px;
     height: 1px;
-    background: black;
+    background: #111111;
     transition: transform 0.2s;
   }
 
@@ -606,8 +671,8 @@ h2 span {
     left: 0;
     right: 0;
     padding: 25px 24px;
-    background: white;
-    border-bottom: 1px solid #eee;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
     flex-direction: column;
     align-items: stretch;
     gap: 20px;
@@ -617,8 +682,12 @@ h2 span {
     display: flex;
   }
 
-  .nav-links .nav-contact {
-    text-align: center;
+  .name-animation {
+    padding: 14px 0;
+  }
+
+  .name-animation span {
+    font-size: 2.2rem;
   }
 
   h1 {
@@ -626,8 +695,8 @@ h2 span {
   }
 
   .hero {
-    padding-top: 70px;
-    gap: 38px;
+    padding-top: 35px;
+    gap: 35px;
   }
 
   .hero-bottom {
@@ -670,13 +739,13 @@ h2 span {
   }
 
   .footer-inner {
-    padding-top: 25px;
-    padding-bottom: 25px;
     align-items: flex-start;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 }
+
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
   *,
